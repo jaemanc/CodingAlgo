@@ -1,4 +1,4 @@
-package com.org.jmc.해시맵트리셋정렬;
+package algo.해시맵트리셋정렬;
 
 import java.util.HashMap;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.org.jmc.이분검색및정렬;
+package algo.이분검색및정렬;
 
 import java.util.LinkedList;
 import java.util.Scanner;

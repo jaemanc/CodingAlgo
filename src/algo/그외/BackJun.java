@@ -1,4 +1,4 @@
-package com.org.jmc.그외;
+package algo.그외;
 import java.util.Scanner;
 
 // Scanner를 사용하기 위해서 java.util.Scanner 클래스를 import 한다.

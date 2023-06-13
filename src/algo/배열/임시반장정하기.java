@@ -1,4 +1,5 @@
-package com.org.jmc.배열;
+package algo.배열;
+
 
 import java.util.Arrays;
 import java.util.Scanner;

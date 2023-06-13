@@ -1,4 +1,4 @@
-package com.org.jmc.dfs_bfs활용;
+package algo.dfs_bfs활용;
 
 import java.io.*;
 import java.util.*;
