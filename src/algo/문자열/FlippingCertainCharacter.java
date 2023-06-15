@@ -1,4 +1,4 @@
-package com.org.jmc.문자열;
+package algo.문자열;
 
 import java.util.*;
 

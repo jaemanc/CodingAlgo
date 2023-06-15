@@ -1,6 +1,4 @@
-package com.org.jmc.해시맵트리셋정렬;
-
-import com.sun.deploy.uitoolkit.impl.fx.AppletStageManager;
+package algo.해시맵트리셋정렬;
 
 import java.util.*;
 

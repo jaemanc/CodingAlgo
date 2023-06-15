@@ -1,4 +1,4 @@
-package com.org.jmc.greedy;
+package algo.greedy;
 
 
 import java.util.ArrayList;

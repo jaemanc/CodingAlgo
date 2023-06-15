@@ -1,4 +1,4 @@
-package com.org.jmc.dfs_bfs기초;
+package algo.dfs_bfs기초;
 
 import java.util.ArrayList;
 import java.util.Scanner;

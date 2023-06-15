@@ -1,4 +1,4 @@
-package com.org.jmc.greedy;
+package algo.greedy;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -34,7 +34,8 @@ public class 큰_수_만들기 {
         if (depth==k) {
             return number;
         } else {
-            return greedy(digits)
+            return null;
+            // return greedy(digits)
         }
     }
 

@@ -1,4 +1,4 @@
-package com.org.jmc.스택큐;
+package algo.스택큐;
 
 import java.util.Scanner;
 import java.util.Stack;

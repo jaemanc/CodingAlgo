@@ -1,4 +1,4 @@
-package com.org.jmc.투포인터슬라이딩윈도;
+package algo.투포인터슬라이딩윈도;
 
 import java.sql.Array;
 import java.util.*;

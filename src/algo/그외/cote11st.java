@@ -1,4 +1,4 @@
-package com.org.jmc.그외;
+package algo.그외;
 
 public class cote11st {
 

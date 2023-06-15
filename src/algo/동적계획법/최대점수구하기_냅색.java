@@ -1,5 +1,4 @@
-package com.org.jmc.동적계획법;
-
+package algo.동적계획법;
 import java.util.*;
 
 public class 최대점수구하기_냅색 {
