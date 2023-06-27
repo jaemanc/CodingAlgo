@@ -11,6 +11,8 @@ public class 큰_수_만들기 {
         String number = "4177252841";
         int k = 4;
 
+        // k만큼의 개수의 수를 빼고 제일 큰 수를 만들어야 한다.
+
         // 정렬
         // Integer[] digits = Stream.of(number.split("")).map(Integer::valueOf).toArray(Integer[]::new);
         // Arrays.sort(digits, Collections.reverseOrder());
