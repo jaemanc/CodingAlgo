@@ -52,6 +52,48 @@
  String[] answer = answers.toArray(new String[answers.size()]);
 ```
 
+#### List< Integer >   <- ->   Integer[]
+```Java
+List<Integer> IntegerList = new ArrayList<>();
+IntegerList.add(1);
+IntegerList.add(13);
 
+List<Integer> IntegerLis2 = new ArrayList<>();
+IntegerLis2.add(55);
+
+// Integer array <- -> Integer list
+Integer[] IntegerArr = IntegerList.toArray(Integer[]::new);
+
+List<Integer> IntegerArrToIntegerList = Arrays.asList(IntegerArr);
+
+// 정렬
+        Arrays.sort(IntegerArr, Collections.reverseOrder());
+
+/// int array <- -> Integer list
+int[] arrInt = IntegerLis2.stream().mapToInt(i->i).toArray();
+
+int[] arrInt2 = IntegerLis2.stream().mapToInt(Integer::intValue).toArray();
+
+// filter로 한번 거를때.
+int[] arrInt3 = IntegerLis2.stream().filter(i -> i != null).mapToInt(Integer::intValue).toArray();
+```
+
+
+String[] strArr = {"aa","bb","cc","dd","ee"};
+
+
+// String array <- -> String List
+List<String> strList = Arrays.asList(strArr);
+
+String[] listToArray = strList.toArray(new String[strList.size()]);
+
+String[] listToArray2 = strList.stream().toArray(String[]::new);
+
+// filter로 거를 때
+String[] temp = strList.stream().filter(str -> str.contains("ee")).toArray(String[]::new);
+
+// 정렬
+Arrays.sort(temp, Collections.reverseOrder());
+```
 
 
