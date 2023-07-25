@@ -85,6 +85,10 @@ int[] arrInt2 = IntegerLis2.stream().mapToInt(Integer::intValue).toArray();
 
 // filter로 한번 거를때.
 int[] arrInt3 = IntegerLis2.stream().filter(i -> i != null).mapToInt(Integer::intValue).toArray();
+
+// stack도 마찬가지.
+int[] answer = stack.stream().mapToInt(Integer::intValue).toArray();
+
 ```
 
 #### intArr to List< Integer>
