@@ -71,6 +71,9 @@ Integer[] IntegerArr = IntegerList.toArray(Integer[]::new);
 
 List<Integer> ArrtoList = Arrays.asList(IntegerArr);
 
+```
+#### Integer List to int arr
+```JAVA
 // 정렬 - 내림차순
 Arrays.sort(IntegerArr, Collections.reverseOrder());
 
@@ -82,6 +85,15 @@ int[] arrInt2 = IntegerLis2.stream().mapToInt(Integer::intValue).toArray();
 
 // filter로 한번 거를때.
 int[] arrInt3 = IntegerLis2.stream().filter(i -> i != null).mapToInt(Integer::intValue).toArray();
+
+// stack도 마찬가지.
+int[] answer = stack.stream().mapToInt(Integer::intValue).toArray();
+
+```
+
+#### intArr to List< Integer>
+```Java
+List<Integer> arrtoList = Arrays.stream(arrInt3).boxed().collect(Collectors.toList());
 ```
 
 
