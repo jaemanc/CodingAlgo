@@ -1,8 +1,6 @@
 package algo.스택큐;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class 다리를_지나는_트럭 {
 
@@ -21,38 +19,40 @@ public class 다리를_지나는_트럭 {
 
     public static int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 0;
+        int sum = 0;
+        int time = 0;
 
-        Queue<Integer> queue = new LinkedList<>();
-        for (int i=0; i<truck_weights.length; i++) {
-            queue.offer(truck_weights[i]);
-        }
+        // 큐 = 다리에 올라간 트럭으로 인식해야 한다.
+        Deque<Integer> deque = new ArrayDeque<>();
 
-        while (!queue.isEmpty()) {
-            int truckNum = 0;
-            int count = 0;
-            int 무게 = weight;
-            int target = queue.poll();
-            System.out.println("다리위로 진입 : "+ target);
-            truckNum++;
-            while ( !queue.isEmpty()&& 무게 - target >= 0 ) {
-                int nextTruck = queue.peek();
+        for (int i=0; i< truck_weights.length; i++) {
+            int truck = truck_weights[i];
 
-                if (무게 - target - nextTruck > 0) {
-                    queue.poll();
-                    truckNum++;
-                    무게-=nextTruck;
-                    System.out.println(" 하나 더 진입 : " + nextTruck+ " / 무게 : " + 무게);
-                } else {
+            while( true ) {
+                if (deque.isEmpty()) {
+                    deque.add(truck);
+                    sum += truck;
+                    time ++; // 다리 오름
                     break;
+                } else if (deque.size() == bridge_length) {
+                    sum -= deque.poll();
+                } else {
+                    if (sum + truck <= weight) {
+                        deque.add(truck);
+                        sum += truck;
+                        time++;
+                        break;
+                    } else {
+                        // 다리에 있는 트럭에 0값을 넣는 것 == 트럭이 다리를 건너는 것과 마찬가지라고 생각해야 함.
+                        deque.add(0);
+                        time++;
+                    }
+
                 }
             }
-
-            count+=bridge_length+truckNum;
-            System.out.println(" 건넜다 : " + count+ "  초 소요! ");
-            answer+=count;
         }
-
-        return answer;
+        return time + bridge_length;
     }
 
 }
+
