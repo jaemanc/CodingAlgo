@@ -36,6 +36,18 @@
         }
     });
 
+    # 이차배열
+    Arrays.sort(jobs, new Comparator<int[]>() {
+        @Override
+        public int compare(int[] o1, int[] o2) {
+            return o1[1] - o2[1];  // 이차배열중 두번째 값 기준으로 오름차순 정렬
+        }
+    });
+
+    #간단하게 해결..?
+    Arrays.sort(jobs, (a,b) -> a[0] - b[0]);
+    PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[1] - o2[1]);
+    
     # 문자형 비교 :
         StrA.compareTo(StrB);
             A != B -> return 다른 문자 개수;
