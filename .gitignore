@@ -1,2 +1,2 @@
 # Project exclude paths
-/out/
+/out/!/lib/JUnitParams-1.1.1.jar
