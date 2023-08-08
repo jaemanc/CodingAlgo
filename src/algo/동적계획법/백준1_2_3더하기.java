@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class 백준1_2_3더하기 {
     /*
      ex )
-3
-4
-7
-10
+    3
+    4
+    7
+    10
      */
     static int[] dp = new int[11];
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class 백준1_2_3더하기 {
         int T = sc.nextInt();
 
         dp[1] = 1;
-        dp[2] = 2;  // 점화식을 떠올리기 까지의 과정이 DP풀이의 포인트이나 상당히 어려운 과정이라 함.. ㅜㅜ
+        dp[2] = 2;  // 점화식을 떠올리기 까지의 과정이 DP풀이의 포인트
         dp[3] = 4;  // 점화식을 세워야 한다. dp[n] = dp[n-3] + dp[n-2] + dp[n-1];
 
         for (int j=0; j<T; j++) {
