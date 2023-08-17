@@ -15,16 +15,10 @@ public class MergeTwoSortedLists {
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
-        answer = recursive(0, list1, list2, answer);
-
-        return answer;
-    }
-
-    public static ListNode recursive(int L, ListNode list1, ListNode list2, ListNode answer) {
+        ListNode answerr = new ListNode(-1);
+        ListNode answer = answerr;
 
         while (list1 != null && list2 != null) {
-
-
             if (list1.val < list2.val) {
                 answer.next = list1;
                 list1 = list1.next;
@@ -34,16 +28,15 @@ public class MergeTwoSortedLists {
             }
             answer = answer.next;
 
-            if (list1 != null)
-                answer.next = list1;
-
-            if (list2 != null)
-                answer.next = list2;
-
         }
-        return answer.next;
-    }
+        if (list1 == null)
+            answer.next = list2;
 
+        if (list2 == null)
+            answer.next = list1;
+
+        return answerr.next;
+    }
 }
 
 class ListNode {
